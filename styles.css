@@ -9,6 +9,52 @@ body::-webkit-scrollbar {
   z-index: 40;
 }
 
+.skills{
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.skill-bar{
+  height: 8px;
+  background: #282828;
+  border-radius: 3px;
+}
+.skill-per{
+  height: 8px;
+  background: #d13639;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  color: black;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+@keyframes fillBars {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
 .scroll-top img{
   height: 5rem;
   width:5rem;
@@ -204,28 +250,6 @@ footer {
   border-radius: 5px;
 }
 
-.service__card i {
-  font-size: 1.5rem;
-}
-
-.service__card h4 {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.service__card p {
-  color: var(--text-light);
-}
-
-.service__card .read__more {
-  width: max-content;
-  padding: 0.5rem 1rem;
-  color: var(--text-light);
-  font-size: 0.8rem;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.05);
-  cursor: pointer;
-}
 
 .project__card {
   display: grid;
